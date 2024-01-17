@@ -1,0 +1,11 @@
+.btnLogout{
+    cursor: pointer;
+}
+.caja{
+    -webkit-box-shadow: 0px -1px 6px 0px rgba(222,219,222,0.71);
+    -moz-box-shadow: 0px -1px 6px 0px rgba(222,219,222,0.71);
+    box-shadow: 0px -1px 6px 0px rgba(222,219,222,0.71);
+}
+.textos a{
+    text-decoration: none !important;
+}

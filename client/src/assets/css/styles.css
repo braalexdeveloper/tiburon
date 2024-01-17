@@ -1,0 +1,564 @@
+.logo{
+    font-size: 3rem !important;
+}
+.sociales > a{
+    font-size: 1.2rem;
+}
+.icoCart{
+    font-size: 1.5rem !important;
+}
+.menuPrincipal li a{
+color: white;
+
+}
+.menuPrincipal li a:hover{
+    
+    background-color: rgb(10, 146, 40);
+    }
+
+.product{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 250px;
+    border: 1px solid rgb(231, 231, 231);
+    margin-top: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+    .product{
+        
+        width: 100%;
+       
+    }
+  }
+
+.product h6{
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.product h6:hover{
+   color: rgb(137, 138, 137);
+   cursor: pointer;
+}
+
+.boxImg{
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+}
+.verProducto{
+    position: absolute;
+    top: -100%; /* El div estará arriba del todo */
+  left: 50%;
+  transform: translateX(-50%);
+    background-color:black;
+    padding: 0.3rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+     width: 70%;
+     text-align: center;
+    opacity: 0;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.verProducto:hover{
+    
+    background-color:rgb(35, 109, 74);
+    
+}
+.boxImg img{
+    width: 100%;
+}
+.boxImg:hover .verProducto {
+    top: 50%; /* Mostrar el div al centro */
+    opacity: 1;
+  }
+
+.boxPrecioCarrito{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(231, 231, 231);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.precio span{
+    font-weight: bold;
+}
+.productCarrito{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:black;
+    transition: all 0.2s ease;
+}
+.bi-bag-plus-fill{
+    color: white;
+    font-size: 17px;
+}
+.productCarrito:hover{
+    background-color:rgb(35, 109, 74);
+    cursor: pointer;
+}
+.bi-bag-plus-fill{
+    color: white;
+    font-size: 17px;
+}
+.btnBottom{
+    position: fixed;
+    z-index: 100;
+    right:5px;
+    bottom: 0px;
+    color: rgb(13, 184, 78) !important;
+    font-size: 30px !important;
+    display: none;
+    transition: all ease;
+    cursor: pointer;
+}
+.btnBottom:hover{
+    color: rgb(6, 129, 53) !important;
+}
+
+.labelFilter{
+    margin-left: 1rem;
+}
+
+.btnSubcripcion{
+    width: 100%;
+    color: white !important;
+    background-color:rgb(6, 129, 53) !important; ;
+}
+
+
+/*mi cuenta*/
+
+/* my account */
+.account_profile {
+    padding: 8px 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.acprof_img img {
+    width: 100%;
+}
+
+.acprof_img {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #E9E4E4;
+    border-radius: 50%;
+}
+
+.acprof_cont {
+    padding-left: 16px;
+}
+
+.acprof_cont p {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.acprof_cont h4 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.acprof_wrap {
+    padding: 24px 16px;
+}
+
+.acprof_links a {
+    display: block;
+    padding-left: 32px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #2B2D42;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.acprof_links a h4 {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.acprof_links a h4 i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 17px;
+    font-size:22px;
+}
+
+.acprof_links {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #E9E4E4;
+}
+
+.acprof_links a:last-child {
+    margin-bottom: 0;
+}
+
+.acprof_links a.active,
+.acprof_links a:hover {
+    color: #0c994b;
+}
+
+.acprof_links:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.prof_info_title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.prof_info_title h4 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.single_prof_info {
+    padding: 24px;
+    min-height: 225px;
+}
+
+.prof_info_title a {
+    color: #FD3D57;
+}
+
+.prof_info_title a:hover {
+    text-decoration: underline;
+}
+
+.prfo_info_cont p {
+    margin-bottom: 0px;
+}
+
+.prof_recent_order {
+    margin-top: 40px;
+    padding: 32px 24px;
+}
+
+.prof_recent_order h4 {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.single_prof_recorder {
+    border: 1px solid #E9E4E4;
+    margin-top: 24px;
+    padding: 32px 24px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4] 130px;
+    grid-template-columns: repeat(4, 1fr) 130px;
+    grid-row-gap: 24px;
+    padding-bottom: 22px;
+}
+
+.prorder_btn {
+    grid-column: 5;
+        grid-column-start: 5;
+    -ms-grid-column-span: 1;
+    grid-column-end: 6;
+    -ms-grid-row-align: center;
+        align-self: center;
+}
+
+.prorder_img {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 4;
+    grid-column-end: 5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.prorder_img img {
+    width: 80px;
+    height: 50px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-right: 16px;
+}
+
+.prorder_btn a {
+    color: #FD3D57;
+    font-size: 16px;
+    border: 1px solid #FD3D57;
+    border-radius: 3px;
+    padding: 8px 24px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.prorder_btn a:hover {
+    background: #0ea315;
+    color: #fff;
+}
+.prorder_txt h5 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.prorder_txt p {
+    font-size: 15px;
+    margin: 0;
+}
+
+.profile_hambarg {
+    position: absolute;
+    right: 24px;
+    top: 18px;
+    font-size: 22px;
+    color: #2b2d42;
+    cursor: pointer;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    border: 1px solid #06a543;
+    height: 32px;
+    width: 32px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.profile_hambarg:hover {
+    color: #07965a;
+}
+
+.acprof_info_wrap {
+    padding: 32px 24px;
+    padding-top: 26px;
+}
+.acprof_info_wrap.voucher {
+    min-height: 400px;
+}
+.acprof_info_wrap .single_billing_inp .nice_select {
+    line-height: 44px;
+    height: 44px;
+    font-size: 15px;
+}
+
+.acprof_info_wrap .single_billing_inp {
+    margin-bottom: 20px;
+}
+
+.acprof_subbtn {
+    margin-top: 12px;
+}
+
+.single_billing_inp span.icon {
+    position: absolute;
+    right: 16px;
+    top: 9px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* account order details */
+.order_detail_wrapper {
+    padding: 32px 24px;
+}
+
+h4.od_title {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.single_orderdet h5 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.single_orderdet p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.sprocess_cont {
+    max-width: 618px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+}
+
+.single_sproc_cont p {
+    margin-bottom: 0;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+.single_sproc_cont .sproc_cont_dot {
+    width: 15px;
+    height: 15px;
+    background: #4CAE50;
+    border-radius: 50%;
+}
+
+.single_sproc_cont .sproc_cont_dot.gray {
+    background: #E9E4E4;
+}
+
+.single_sproc_cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.shipping_process {
+    margin-top: 70px;
+}
+
+.sprosbar {
+    position: absolute;
+    left: 37px;
+    top: 6px;
+    right: 35px;
+    background: #E9E4E4;
+    height: 2px;
+    z-index: -1;
+}
+
+.sprosbar .sp_fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: #4CAE50;
+}
+
+.sprocess_tooltip {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: 1px solid #E9E4E4;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 12px 24px;
+    margin-top: 32px;
+    position: relative;
+    background: #fff;
+    max-width: 750px;
+}
+
+.sprocess_tooltip p {
+    margin: 0;
+    font-size: 15px;
+    color: #464545;
+}
+
+.sprocess_tooltip::after {
+    position: absolute;
+    content: '';
+    width: 27px;
+    height: 27px;
+    border: 1px solid #E9E4E4;
+    right: 87px;
+    top: -14px;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    z-index: -1;
+    background: #fff;
+}
+
+.orderprod_img img {
+    width: 64px;
+    height: 64px;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+
+.order_prodetails {
+    margin-top: 70px;
+}
+
+.single_orderdet.pdname {
+    padding-left: 16px;
+}
+
+.padding_default {
+    padding: 30px 24px;
+}
+
+.align-self-center {
+    -ms-flex-item-align: center !important;
+        -ms-grid-row-align: center !important;
+        align-self: center !important;
+}
+
+.single_orderdet.pdname {
+    width: 220px;
+}
+
+.nice_select.retorder {
+    width: 180px;
+    height: 38px;
+    line-height: 38px;
+}
+
+.nice-select.retorder .option {
+    min-height: 38px;
+    line-height: 38px;
+}
+
+.single_retreq p {
+    margin-left: 32px;
+    line-height: 1.4;
+}
+
+.return_requirement {
+    margin-top: 32px;
+}

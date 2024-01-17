@@ -1,0 +1,26 @@
+<div class="return_ordwrap">
+    <!--<h2 class="text-center mb-4">Tus Pedidos</h2>-->
+    <!-- product details -->
+  
+    <div *ngFor="let orden of orders" class="caja order_prodetails d-flex flex-wrap shadow_sm padding_default mt-0 mb-3">
+        
+        <div class="single_orderdet pdname">
+            <h5>{{ orden.date | date:'dd/MM/yyyy' }}</h5>
+            <p class="text-semibold">${{orden.total}}</p>
+        </div>
+        <div class="single_orderdet w-xs-33 ms-md-auto ms-0 mt-3 mt-md-0">
+            <h5>N° Pedido</h5>
+            <p>000{{orden.id}}</p>
+        </div>
+        <div class="single_orderdet w-xs-33 ms-auto mt-3 mt-md-0">
+            <h5>Estado</h5>
+            <p class="text-green">{{orden.state}}</p>
+        </div>
+        <div class="orderdet_btn align-self-center ms-auto">
+            <a routerLink="/compras/{{orden.id}}" class="default_btn second rounded text-capitalize small mt-3 mt-md-0 btn btn-success">Ver Pedido</a>
+        </div>
+    </div>
+
+   
+
+</div>

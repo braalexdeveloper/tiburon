@@ -1,0 +1,263 @@
+.default_btn {
+    border: 1px solid #058f3e;
+    background: #058f3e;
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: .5s;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    
+}
+
+.default_btn:hover,
+.default_btn.second {
+    background-color: transparent;
+    color: #058f3e;;
+}
+.default_btn.second:hover {
+    background: #FD3D57;
+    color: #fff;
+}
+.default_btn.xs_btn {
+    min-width: 80px;
+    padding: 6px 15px;
+}
+
+
+/* checkout page design */
+
+.single_billing_inp label {
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.single_billing_inp input,
+.single_billing_inp textarea {
+    font-size: 14px;
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    border: 1px solid #E9E4E4;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.single_billing_inp input.right {
+    border: 1px solid #28A745;
+}
+
+.single_billing_inp input.wrong {
+    border: 1px solid #FB3245;
+}
+
+.single_billing_inp label span {
+    color: #fd3d57;
+}
+
+.single_billing_inp p.inp_err_msg {
+    margin-bottom: 0;
+    color: #FB3245;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.single_billing_inp {
+    margin-bottom: 17px;
+}
+
+
+
+
+/* shopping cart */
+.shop_cart_title {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 70px;
+    background: #E9E4E4;
+}
+
+.shop_cart_title.wishlist_ttl span:first-child {
+    width: 22%;
+}
+
+.shop_cart_title.wishlist_ttl span:nth-child(2) {
+    width: 39%;
+}
+
+.single_shop_cart,
+.cart_summary {
+    border: 1px solid #E9E4E4;
+    border-radius: 5px;
+    padding: 20px;
+    padding-bottom: 15px;
+}
+
+.single_shop_cart {
+    margin-top: 24px;
+}
+
+.checkout_order {
+    margin-top: 40px;
+    border: 1px solid #E9E4E4;
+    border-radius: 3px;
+    padding: 24px 16px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.checkout_order h4 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 150%;
+}
+
+.checkout_order h4 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.5;
+    border-bottom: 1px solid #E9E4E4;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.checkorder_cont h5 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+.checkorder_cont.subtotal-h h5 {
+    font-size: 15px;
+}
+
+
+
+.single_check_order {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.checkorder_cont p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+p.checkorder_qnty {
+    margin-left: auto;
+    margin-right: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+p.checkorder_price {
+    margin-left: auto;
+    min-width: 70px;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.single_check_order.subs,
+.single_check_order.total {
+    border-bottom: 1px solid #E9E4E4;
+}
+
+.single_check_order.total h5,
+.single_check_order.subs h5 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.single_check_order.total .checkorder_cont h5,
+.single_check_order.total .checkorder_price {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.checkorder_agree {
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.checkorder_agree label {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.checkorder_agree input {
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+}
+
+
+
+/*.payment-box{
+    background-color: #28A745;
+}
+#card{
+    background-color: #fd3d57;
+    color: white;
+}*/
+
+/* Agrega estilos personalizados a tu formulario de tarjeta de Stripe */
+.StripeElement {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: rgb(240, 238, 238);
+    color:#2fc27d;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    transition: box-shadow 150ms ease;
+  }
+  
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+    
+  }
+  
+  .StripeElement--invalid {
+    border-color: #b32306;
+  }
+ 

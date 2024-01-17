@@ -1,0 +1,70 @@
+<header>
+    <div class="bg-light">
+        <div class="container py-1  d-flex justify-content-end">
+            <div class="d-inline-flex align-items-center sociales">
+                <a class="text-dark px-2" href="">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a class="text-dark px-2" href="">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a class="text-dark px-2" href="">
+                    <i class="bi bi-youtube"></i>
+                </a>
+                <a class="text-dark px-2" href="">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <a class="text-dark px-2" href="">
+                    <i class="bi bi-instagram"></i>
+                </a>
+  
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-between align-items-center py-2">
+        <div class="logo">
+            <a class="navbar-brand" routerLink="/">TIBURON</a>
+        </div>
+        <div class="items-cuenta">
+            <a class="navbar-brand me-2" *ngIf="!isUserLoggedIn" routerLink="/login"> Login</a> 
+            <a class="navbar-brand me-2" *ngIf="!isUserLoggedIn" href="#">Register</a>
+            
+            <a class="navbar-brand me-3  btnHeader" *ngIf="isUserLoggedIn" routerLink="/dashboard">
+                <i class="bi bi-person-fill"></i> <span>Mi Cuenta</span>
+            </a>
+            <a class="navbar-brand me-2" routerLink="/carrito">
+                <i class="bi bi-cart3 icoCart"></i>
+                <span class="position-absolute text-dark translate-middle badge rounded-circle bg-warning">
+                    {{cantCarrito}}
+                </span>
+            </a>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-dark " data-bs-theme="dark">
+        <div class="container">
+  
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 menuPrincipal">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+  
+            </div>
+        </div>
+    </nav>
+  </header>

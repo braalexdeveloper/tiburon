@@ -1,0 +1,14 @@
+
+<app-slider></app-slider>
+<section class="container sectionNewProducts">
+  <div *ngIf="loading; else loadedContent" class="text-center py-5">
+    <app-spinner></app-spinner>
+</div>
+<ng-template #loadedContent>
+<h2 class="pt-2 mt-4 display-4">Nuevos Productos</h2>
+<div class="products ">
+  <app-card-product class="d-flex justify-content-between flex-wrap pb-4" [PRODUCTS]="productsAleatorio"></app-card-product>
+</div>
+</ng-template>
+</section>
+

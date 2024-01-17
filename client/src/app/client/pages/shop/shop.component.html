@@ -1,0 +1,152 @@
+<div *ngIf="loading; else loadedContent" class="text-center py-5">
+    <app-spinner></app-spinner>
+</div>
+<ng-template #loadedContent>
+    <section class="container sectionProducts">
+
+        <div class="row py-4 mt-4">
+
+            <!-- Shop Sidebar Start -->
+            <div class="col-lg-3 col-md-12">
+                <!-- Price Start -->
+                <div class="border-bottom mb-4 pb-4">
+                    <h5 class="font-weight-semi-bold mb-4">FILTRO POR MARCA</h5>
+                    <form>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" checked id="price-all">
+                            <label class="custom-control-label labelFilter" for="price-all">Todas las marcas</label>
+
+                        </div>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" id="price-1">
+                            <label class="custom-control-label labelFilter" for="price-1">Adidas</label>
+
+                        </div>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" id="price-2">
+                            <label class="custom-control-label labelFilter" for="price-2">Nike</label>
+
+                        </div>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" id="price-3">
+                            <label class="custom-control-label labelFilter" for="price-3">Puma</label>
+
+                        </div>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" id="price-4">
+                            <label class="custom-control-label labelFilter" for="price-4">Rebook</label>
+
+                        </div>
+
+                    </form>
+                </div>
+                <!-- Price End -->
+
+                <!-- Color Start -->
+                <div class=" mb-4 pb-4">
+                    <h5 class="font-weight-semi-bold mb-4">FILTRO POR CATEGORIA</h5>
+                    <form>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" checked id="color-all">
+                            <label class="custom-control-label labelFilter" for="price-all">Todas las marcas</label>
+
+                        </div>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" id="color-1">
+                            <label class="custom-control-label labelFilter" for="color-1">Black</label>
+
+                        </div>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" id="color-2">
+                            <label class="custom-control-label labelFilter" for="color-2">White</label>
+
+                        </div>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" id="color-3">
+                            <label class="custom-control-label labelFilter" for="color-3">Red</label>
+
+                        </div>
+                        <div
+                            class="custom-control custom-checkbox d-flex align-items-center justify-content-start mb-3">
+                            <input type="checkbox" class="custom-control-input" id="color-4">
+                            <label class="custom-control-label labelFilter" for="color-4">Blue</label>
+
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-start">
+                            <input type="checkbox" class="custom-control-input" id="color-5">
+                            <label class="custom-control-label labelFilter" for="color-5">Green</label>
+
+                        </div>
+                    </form>
+                </div>
+                <!-- Color End -->
+
+
+            </div>
+            <!-- Shop Sidebar End -->
+
+            <div class="products col-lg-9 col-md-12 d-flex justify-content-between flex-wrap pb-4">
+                <div class="col-12 pb-1">
+                    <div class="d-flex align-items-center justify-content-between ">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" [(ngModel)]="marcaZapatilla" name="marcaZapatilla"
+                                    class="form-control" (input)="searchMarca()" placeholder="Buscar por marca">
+                                <div class="input-group-append">
+                                    <span class="input-group-text bg-transparent text-primary">
+                                        <i class="bi bi-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="ml-4">
+
+                            <select class="form-select" [(ngModel)]="typeOrder" (change)="onChangeOrder()"
+                                aria-label="Default select example">
+                                <option value="" disabled selected>Ordenar Por</option>
+                                <option value="asc">Precio más bajo</option>
+                                <option value="desc">Precio más alto</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <app-card-product class="col-12 pb-1 d-flex justify-content-between flex-wrap mb-4"
+                    [PRODUCTS]="products"></app-card-product>
+
+                <!--Paginación-->
+                <nav aria-label="Page navigation example" class="m-auto">
+                    <ul class="pagination">
+                        <li class="page-item " [class.disabled]="isPrevDisabled()">
+                            <a class="page-link" (click)="prevPage(1)" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item {{currentPage==numPage ? 'active' : ''}}"
+                            *ngFor="let numPage of getArrayPages()"><a class="page-link"
+                                (click)="allProducts(numPage)">{{numPage}}</a></li>
+
+                        <li class="page-item" [class.disabled]="isNextDisabled()">
+                            <a class="page-link" (click)="nextPage(1)" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--end Paginación-->
+
+            </div>
+        </div>
+
+    </section>
+</ng-template>

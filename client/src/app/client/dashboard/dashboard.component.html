@@ -1,0 +1,81 @@
+ <!-- account wrapper -->
+ <div class="my_account_wrap section_padding_b py-4">   
+    <div class="container">
+        <div class="row">
+            <!--  account sidebar  -->
+            <div class="col-lg-3">
+                <div class="account_sidebar textos">
+                    <div class="account_profile position-relative shadow_sm caja">
+                        <div class="acprof_img">
+                            <a href="account.html">
+                                <img loading="lazy"  src="https://png.pngtree.com/png-vector/20190425/ourmid/pngtree-vector-business-men-icon-png-image_992467.jpg" alt="user">
+                            </a>
+                        </div>
+                        <div class="acprof_cont">
+                            <p>Hola,</p>
+                            <h4>{{user.name+' '+user.lastName}}</h4>
+                        </div>
+                        <div class="profile_hambarg d-lg-none d-block">
+                            <i class="las la-bars"></i>
+                        </div>
+                    </div>
+                    <div class="acprof_wrap shadow_sm caja">
+                        <div class="acprof_links">
+                            <a href="account.html">
+                                <h4 class="acprof_link_title">
+                                    <i class="bi bi-person-vcard"></i>
+                                    Manage My Account
+                                </h4>
+                            </a>
+                            <a href="account-profile-info.html">Profile Information</a>
+                            <a href="account-manage-address.html">Manage Address</a>
+                            <a href="account-change-password.html">Change Password</a>
+                        </div>
+                        <div class="acprof_links">
+                            <a href="account-order-history.html">
+                                   <h4 class="acprof_link_title">
+                                    <i class="bi bi-gift"></i>
+                                    Pedidos
+                                </h4>
+                            </a>
+                            <a routerLink="/dashboard" class="active">Mis Pedidos</a>
+                            <a href="account-order-cancel.html">My Cancellations</a>
+                            <a href="account-my-reviews.html">My Reviews</a>
+                        </div>
+                        <div class="acprof_links">
+                            <a href="account-payment-methods.html">
+                               <h4 class="acprof_link_title">
+                                <i class="bi bi-credit-card-2-back"></i>
+                                    Payments Methods
+                                </h4>
+                            </a>
+                            <a href="account-voucher.html">Voucher</a>
+                        </div>
+                        <div class="acprof_links">
+                            <a href="wish-list.html">
+                            <h4 class="ac_link_title">
+                                <i class="bi bi-bag-heart"></i>
+                                    My Wishlist
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="acprof_links border-0 ">
+                            <a class="btnLogout" (click)="logout()">
+                                <h4 class="acprof_link_title">
+                                    <i class="bi bi-power"></i>
+                                    Cerrar Sesión
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- account content -->
+            <div class="col-lg-9">
+                <router-outlet></router-outlet>  
+            </div>
+           
+
+        </div>
+    </div>
+</div>

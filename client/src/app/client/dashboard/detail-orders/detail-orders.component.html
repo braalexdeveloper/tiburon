@@ -1,0 +1,49 @@
+<div  class="caja order_prodetails d-flex flex-wrap  shadow_sm padding_default mt-0 mb-4">
+        
+    <div class="single_orderdet  mt-md-0">
+        <h5>Fecha</h5>
+        <p class="text-semibold">{{ order.date | date:'dd/MM/yyyy' }}</p>
+    </div>
+    <div class="single_orderdet w-xs-33 ms-md-auto ms-0 mt-3 mt-md-0">
+        <h5>N° Pedido</h5>
+        <p>000{{order.id}}</p>
+    </div>
+    <div class="single_orderdet w-xs-33 ms-auto mt-3 mt-md-0">
+        <h5>Estado</h5>
+        <p class="text-green">{{order.state}}</p>
+    </div>
+    <div class="single_orderdet w-xs-33 ms-auto mt-3 mt-md-0">
+        <h5>Total</h5>
+        <p class="text-green">${{order.total}}</p>
+    </div>
+   
+</div>
+<table class="table table-success table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Sub total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of order.orders_details;let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>
+            <img class="img-thumbnail" src="{{detail.product.image}}" alt="{{detail.product.name}}" width="80">
+        </td>
+        <td>
+           <a class="text-decoration-none" routerLink="/producto/{{detail.product.id}}"> {{detail.product.name}}</a>
+        </td>
+        <td>{{detail.product.marca}}</td>
+        <td>{{detail.count}}</td>
+        <td>${{detail.price}}</td>
+        <td>${{detail.subtotal}}</td>
+      </tr>
+   
+    </tbody>
+  </table>
