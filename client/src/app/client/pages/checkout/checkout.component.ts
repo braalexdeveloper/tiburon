@@ -107,7 +107,7 @@ export class CheckoutComponent implements OnInit {
       next: (data) => {
        this._alertify.success(data.message);
        this._storageService.setCarrito([]);
-       this.router.navigate(['/productos']);
+       this.router.navigate(['/dashboard']);
       },
       error: (error) => {
         this._alertify.error(error);

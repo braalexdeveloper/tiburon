@@ -1,16 +1,51 @@
-<section class="container  py-4">
+<!--<section class="container  py-4">
   <h1 class="text-center">Iniciar Sesión</h1>
-  <form class="col-lg-6 m-auto">
+  
+  <form class="col-lg-6 m-auto" #loginForm="ngForm">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" [(ngModel)]="email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
-
+      <input type="email" class="form-control" [(ngModel)]="email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required #emailField="ngModel">
+      <div *ngIf="emailField.hasError('required')">Email is required.</div>
+      <div *ngIf="emailField.hasError('email')">Invalid email address.</div>
     </div>
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" [(ngModel)]="password" name="password" id="exampleInputPassword1">
+      <input type="password" class="form-control" [(ngModel)]="password" name="password" id="exampleInputPassword1" required #passwordField="ngModel">
+      <div *ngIf="passwordField.hasError('required')">Password is required.</div>
     </div>
-
     <button type="submit" class="btn btn-primary" (click)="login()">Ingresar</button>
   </form>
-</section>
+</section>-->
+  
+  
+  
+
+  <div class="modal-header custom-modal">
+    <h4 class="modal-title">Iniciar Sesión</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- Aquí coloca tu contenido de login -->
+    <form class="col-lg-12 m-auto mb-2">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" [(ngModel)]="email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+  
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" id="exampleInputPassword1" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary col-lg-12" (click)="login()">Ingresar</button>
+    </form>
+    <a class="btn btn-secondary col-lg-12" (click)="openRegisterModal()" >Crear Cuenta</a>
+    <a class="btn btn-warning col-lg-12 mt-2" (click)="loginGoogle()" >Google</a>
+
+
+  </div>
+
+
+  

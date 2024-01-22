@@ -1,0 +1,38 @@
+<div class="modal-header custom-modal">
+    <h4 class="modal-title">Registrar Usuario</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- Aquí coloca tu contenido de login -->
+    <form class="col-lg-12 m-auto mb-2">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombres</label>
+            <input type="name" class="form-control" [(ngModel)]="name" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+      
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Apellidos</label>
+            <input type="lastName" class="form-control" [(ngModel)]="lastName" name="lastName" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+      
+          </div>
+          <!--<div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Dirección</label>
+            <input type="direccion" class="form-control" [(ngModel)]="direccion" name="direccion" id="exampleInputaddress1" aria-describedby="addressHelp" required>
+      
+          </div>-->
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" [(ngModel)]="email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+  
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" id="exampleInputPassword1" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary col-lg-12" (click)="crearCuenta()">Crear</button>
+    </form>
+    
+  </div>

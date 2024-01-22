@@ -26,8 +26,8 @@
             <a class="navbar-brand" routerLink="/">TIBURON</a>
         </div>
         <div class="items-cuenta">
-            <a class="navbar-brand me-2" *ngIf="!isUserLoggedIn" routerLink="/login"> Login</a> 
-            <a class="navbar-brand me-2" *ngIf="!isUserLoggedIn" href="#">Register</a>
+            <a class="navbar-brand me-2 btnHeader" *ngIf="!isUserLoggedIn" (click)="openLoginModal()">Iniciar Sesión</a> 
+            
             
             <a class="navbar-brand me-3  btnHeader" *ngIf="isUserLoggedIn" routerLink="/dashboard">
                 <i class="bi bi-person-fill"></i> <span>Mi Cuenta</span>
@@ -60,7 +60,7 @@
                         <a class="nav-link" routerLink="/productos">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" routerLink="/contacto">Contacto</a>
                     </li>
                 </ul>
   

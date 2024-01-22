@@ -9,10 +9,13 @@ export class StorageService{
   private carritoSubject = new BehaviorSubject<number>(0);
   carrito$ = this.carritoSubject.asObservable();
 
-  private _userLogin=new BehaviorSubject<boolean>(true);
+  private _userLogin=new BehaviorSubject<boolean>(false);
   userLogin$=this._userLogin.asObservable();
 
-  user:any='';
+  private userSubject=new BehaviorSubject<any>(this.getUser());
+  user$=this.userSubject.asObservable();
+
+  //user:any='';
   carrito:any[]=[];
  
 
@@ -30,7 +33,7 @@ export class StorageService{
   
    initializeData() {
     // User
-    this.user = JSON.parse(localStorage.getItem('user') || '[]');
+   // this.user = JSON.parse(localStorage.getItem('user') || '[]');
 
     // Carrito
     this.carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
@@ -45,7 +48,7 @@ getUser(){//Esta funcion me trae el user del localstorage
 
 setUser(user:any){
   localStorage.setItem('user',JSON.stringify(user));
- 
+  this.userSubject.next(user);
 }
 
 // endUser

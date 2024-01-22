@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 import { StorageService } from '../../services/storage.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from '../../pages/login/login.component';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +17,7 @@ export class HeaderComponent implements OnInit{
  constructor(
             private _usuarioServicio:UsuarioService,
             private _storageService:StorageService,
-            
+            private modalService:NgbModal
   ){
  
  }
@@ -47,6 +49,19 @@ export class HeaderComponent implements OnInit{
   this.isAuth = !!user.token;  // Convertir a booleano: true si hay un token, false si no lo hay
   console.log('isAuth actualizado:', this.isAuth);
 }*/
+
+openLoginModal() {
+  const modalRef = this.modalService.open(LoginComponent);
+  // Puedes realizar acciones después de que el modal se ha cerrado, si es necesario.
+  modalRef.result.then(
+    (result) => {
+      console.log(`Modal cerrado con: ${result}`);
+    },
+    (reason) => {
+      console.log(`Modal cerrado con: ${reason}`);
+    }
+  );
+}
 
  
 }

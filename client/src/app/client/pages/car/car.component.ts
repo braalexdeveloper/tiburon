@@ -71,15 +71,17 @@ constructor(
     
   }
 
-  /*checkout(){
+  checkout(){
     let data=JSON.parse(localStorage.getItem('user') || '[]');
     if(data.user){
        this.router.navigate(['/checkout']);
     }else{
-      alert("Debes Iniciar Sesión para Comprar")
-      this.router.navigate(['/login']);
-    }*/
+      this.alertify.error("Debes Iniciar Sesión para Comprar")
+      
+    }
   }
+
+}
 
 
 

@@ -17,6 +17,9 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { AboutComponent } from './pages/about/about.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RegisterComponent } from './components/register/register.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 
@@ -35,6 +38,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     CheckoutComponent,
     AboutComponent,
     SpinnerComponent,
+    RegisterComponent,
+    ContactComponent,
     
   ],
   imports: [
@@ -42,7 +47,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     ClientRoutingModule,
     HttpClientModule,
     FormsModule,
-    DashboardModule
+    DashboardModule,
+    NgbModule
   ],
   providers: [DatePipe],
 })

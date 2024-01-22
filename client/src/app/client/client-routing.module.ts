@@ -9,6 +9,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { AuthGuard } from '../utils/auth.guard';
 import { AboutComponent } from './pages/about/about.component';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 const routes: Routes = [
@@ -35,6 +36,10 @@ const routes: Routes = [
 {
   path:'nosotros',
   component:AboutComponent
+},
+{
+  path:'contacto',
+  component:ContactComponent
 },
 {
   path:'checkout',
